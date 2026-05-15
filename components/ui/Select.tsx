@@ -8,12 +8,12 @@ interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
 
 export const Select = forwardRef<HTMLSelectElement, Props>(
     ({ label, error, className = "", children, ...props }, ref) => (
-        <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
             {label && (
                 <label style={{
                     fontSize: "10px",
                     fontWeight: 600,
-                    color: "#888",
+                    color: "#c9a96e",
                     textTransform: "uppercase",
                     letterSpacing: "0.06em",
                 }}>
@@ -25,14 +25,14 @@ export const Select = forwardRef<HTMLSelectElement, Props>(
                     ref={ref}
                     style={{
                         width: "100%",
-                        paddingLeft: "0.75rem",
+                        paddingLeft: "0.875rem",
                         paddingRight: "2.25rem",
-                        paddingTop: "8px",
-                        paddingBottom: "8px",
+                        paddingTop: "10px",
+                        paddingBottom: "10px",
                         fontSize: "13px",
-                        background: "#fff",
-                        color: "#111",
-                        border: "0.5px solid rgba(0,0,0,0.15)",
+                        background: "#2c2c2a",
+                        color: "#f5f0e8",
+                        border: "0.5px solid rgba(255,255,255,0.08)",
                         borderRadius: "8px",
                         outline: "none",
                         appearance: "none",
@@ -41,7 +41,7 @@ export const Select = forwardRef<HTMLSelectElement, Props>(
                     }}
                     className={[
                         "focus:border-[#c9a96e] focus:ring-1 focus:ring-[#c9a96e]/30",
-                        "disabled:bg-[#f1efe8] disabled:cursor-not-allowed",
+                        "disabled:bg-[#1a1714] disabled:cursor-not-allowed disabled:text-[#5f5e5a]",
                         error ? "border-red-400/50 focus:ring-red-400/50 focus:border-red-400" : "",
                         className,
                     ].join(" ")}
@@ -56,7 +56,7 @@ export const Select = forwardRef<HTMLSelectElement, Props>(
                         right: "12px",
                         top: "50%",
                         transform: "translateY(-50%)",
-                        color: "#999",
+                        color: "#888780",
                         pointerEvents: "none",
                     }}
                 />

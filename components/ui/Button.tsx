@@ -15,7 +15,7 @@ const BASE: React.CSSProperties = {
     gap: "6px",
     fontWeight: 500,
     borderRadius: "8px",
-    transition: "all 0.12s",
+    transition: "all 0.15s",
     cursor: "pointer",
     outline: "none",
     userSelect: "none",
@@ -25,7 +25,7 @@ const BASE: React.CSSProperties = {
 
 const SIZES: Record<string, React.CSSProperties> = {
     sm: { padding: "5px 10px", fontSize: "11px" },
-    md: { padding: "8px 16px", fontSize: "13px" },
+    md: { padding: "9px 18px", fontSize: "13px" },
 };
 
 const VARIANTS: Record<string, React.CSSProperties> = {

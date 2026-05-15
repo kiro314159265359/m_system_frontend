@@ -9,12 +9,12 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 
 export const Input = forwardRef<HTMLInputElement, Props>(
     ({ label, error, hint, icon, className = "", style, ...props }, ref) => (
-        <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
             {label && (
                 <label style={{
                     fontSize: "10px",
                     fontWeight: 600,
-                    color: "#888",
+                    color: "#c9a96e",
                     textTransform: "uppercase",
                     letterSpacing: "0.06em",
                 }}>
@@ -32,7 +32,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(
                             pointerEvents: "none",
                             display: "flex",
                             alignItems: "center",
-                            color: "#999",
+                            color: "#888780",
                         }}
                     >
                         {icon}
@@ -42,23 +42,23 @@ export const Input = forwardRef<HTMLInputElement, Props>(
                     ref={ref}
                     style={{
                         width: "100%",
-                        paddingLeft: icon ? "2.5rem" : "0.75rem",
-                        paddingRight: "0.75rem",
-                        paddingTop: "8px",
-                        paddingBottom: "8px",
+                        paddingLeft: icon ? "2.5rem" : "0.875rem",
+                        paddingRight: "0.875rem",
+                        paddingTop: "10px",
+                        paddingBottom: "10px",
                         fontSize: "13px",
-                        background: "#fff",
-                        color: "#111",
-                        border: "0.5px solid rgba(0,0,0,0.15)",
+                        background: "#2c2c2a",
+                        color: "#f5f0e8",
+                        border: "0.5px solid rgba(255,255,255,0.08)",
                         borderRadius: "8px",
                         outline: "none",
                         transition: "all 0.15s",
                         ...style,
                     }}
                     className={[
-                        "placeholder:text-[#bbb]",
+                        "placeholder:text-[#888780]",
                         "focus:border-[#c9a96e] focus:ring-1 focus:ring-[#c9a96e]/30",
-                        "disabled:bg-[#f1efe8] disabled:text-[#888] disabled:cursor-not-allowed",
+                        "disabled:bg-[#1a1714] disabled:text-[#5f5e5a] disabled:cursor-not-allowed",
                         error ? "border-red-400/50 focus:ring-red-400/50 focus:border-red-400" : "",
                         className,
                     ].join(" ")}
@@ -66,7 +66,7 @@ export const Input = forwardRef<HTMLInputElement, Props>(
                 />
             </div>
             {error && <p style={{ fontSize: "11px", color: "#e24b4a" }}>{error}</p>}
-            {hint && !error && <p style={{ fontSize: "11px", color: "#999" }}>{hint}</p>}
+            {hint && !error && <p style={{ fontSize: "11px", color: "#888780" }}>{hint}</p>}
         </div>
     )
 );

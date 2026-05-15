@@ -40,12 +40,12 @@ export function CardHeader({
             borderBottom: "0.5px solid rgba(0,0,0,0.07)",
             background: "#fafaf9",
         }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "9px" }}>
                 {icon && (
                     <div style={{
-                        width: "28px",
-                        height: "28px",
-                        borderRadius: "7px",
+                        width: "30px",
+                        height: "30px",
+                        borderRadius: "8px",
                         background: "#faeeda",
                         display: "flex",
                         alignItems: "center",

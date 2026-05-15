@@ -560,21 +560,35 @@ textarea {
 /* ── Small inline select ── */
 
 .form-select-sm {
-  width: 130px;
-  padding: 5px 8px;
+  width: 140px;
+  padding: 7px 10px;
   font-size: 11px;
-  border: 0.5px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
-  background: #fff;
-  color: #333;
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 7px;
+  background: #2c2c2a;
+  color: #f5f0e8;
   outline: none;
   appearance: auto;
   cursor: pointer;
+  transition: all 0.15s;
 }
 
 .form-select-sm:focus {
   border-color: #c9a96e;
   box-shadow: 0 0 0 2px rgba(201,169,110,0.15);
+}
+
+/* Dark select option backgrounds */
+select option {
+  background: #2c2c2a;
+  color: #f5f0e8;
+}
+
+/* Number input spinner styling */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+  height: 28px;
 }
 
 /* ── Center layout ── */
@@ -841,4 +855,16 @@ textarea {
 @keyframes spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+
+/* ── Date input dark theming ── */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(0.7);
+  cursor: pointer;
+}
+
+/* ── Focus visible ring ── */
+*:focus-visible {
+  outline: 2px solid rgba(201, 169, 110, 0.4);
+  outline-offset: 2px;
 }

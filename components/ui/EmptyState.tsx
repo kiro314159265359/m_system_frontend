@@ -19,9 +19,9 @@ export function EmptyState({ icon, title, description, action }: Props) {
         }}>
             <div style={{
                 padding: "14px",
-                background: "#f1efe8",
+                background: "#faeeda",
                 borderRadius: "12px",
-                color: "#888",
+                color: "#854f0b",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
